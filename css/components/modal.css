@@ -1,0 +1,232 @@
+/*
+ * Tarija Experiencias
+ * Component — Modal
+ *
+ * Responsabilidad:
+ * Definir la estructura visual reutilizable
+ * de ventanas modales del proyecto.
+ *
+ * El comportamiento y control de estado
+ * serán responsabilidad de JavaScript.
+ */
+
+/* ==============================
+   Overlay
+   ============================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: var(--z-modal);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--spacing-lg);
+
+    background-color: rgb(0 0 0 / 60%);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity var(--transition-base),
+        visibility var(--transition-base);
+}
+
+/* ==============================
+   Modal visible
+   ============================== */
+
+.modal.is-open {
+    display: flex;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ==============================
+   Contenedor
+   ============================== */
+
+.modal__dialog {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 42rem;
+    max-height: calc(100vh - 2rem);
+
+    overflow: hidden;
+
+    color: var(--color-text);
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    transform: translateY(0);
+}
+
+/* ==============================
+   Encabezado
+   ============================== */
+
+.modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+
+    padding: var(--spacing-lg);
+
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+/* ==============================
+   Título
+   ============================== */
+
+.modal__title {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* ==============================
+   Botón cerrar
+   ============================== */
+
+.modal__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    color: var(--color-text-secondary);
+    background-color: transparent;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+
+    font-size: 1.25rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.modal__close:hover {
+    color: var(--color-primary);
+    background-color: var(--color-surface-soft);
+    border-color: var(--color-primary);
+}
+
+/* ==============================
+   Contenido
+   ============================== */
+
+.modal__body {
+    overflow-y: auto;
+
+    padding: var(--spacing-lg);
+}
+
+/* ==============================
+   Pie
+   ============================== */
+
+.modal__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+
+    padding: var(--spacing-lg);
+
+    border-top: 1px solid var(--color-border-light);
+}
+
+/* ==============================
+   Variante grande
+   ============================== */
+
+.modal--large .modal__dialog {
+    max-width: 56rem;
+}
+
+/* ==============================
+   Variante pequeña
+   ============================== */
+
+.modal--small .modal__dialog {
+    max-width: 30rem;
+}
+
+/* ==============================
+   Accesibilidad
+   ============================== */
+
+.modal__close:focus-visible {
+    outline: 3px solid var(--color-accent-light);
+    outline-offset: 3px;
+}
+
+/* ==============================
+   Responsive móvil
+   ============================== */
+
+@media (max-width: 767px) {
+
+    .modal {
+        align-items: flex-end;
+
+        padding: 0;
+    }
+
+    .modal__dialog {
+        max-height: 90vh;
+
+        border-radius:
+            var(--radius-lg)
+            var(--radius-lg)
+            0
+            0;
+    }
+
+    .modal__header,
+    .modal__body,
+    .modal__footer {
+        padding: var(--spacing-md);
+    }
+
+    .modal__footer {
+        justify-content: stretch;
+    }
+
+    .modal__footer .button {
+        flex: 1;
+    }
+}

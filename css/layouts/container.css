@@ -1,0 +1,42 @@
+/*
+ * Tarija Experiencias
+ * Layout — Container
+ *
+ * Responsabilidad:
+ * Definir el contenedor principal reutilizable
+ * para mantener el contenido alineado y limitado
+ * a un ancho máximo.
+ *
+ * Este archivo no debe contener estilos de componentes.
+ */
+
+/* ==============================
+   Contenedor principal
+   ============================== */
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+}
+
+/* ==============================
+   Tablet
+   ============================== */
+
+@media (min-width: 768px) {
+    .container {
+        padding-inline: 2rem;
+    }
+}
+
+/* ==============================
+   Desktop
+   ============================== */
+
+@media (min-width: 1200px) {
+    .container {
+        padding-inline: 2.5rem;
+    }
+}

@@ -1,0 +1,284 @@
+/*
+ * Tarija Experiencias
+ * Component — Responsive & Light Mode Enhancements
+ *
+ * Responsabilidad:
+ * Asegurar que la página sea 100% responsiva en todos los dispositivos
+ * y que el modo claro se vea profesional y pulido.
+ */
+
+/* ==============================
+   Base responsive — todos los elementos
+   ============================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Imágenes responsivas globales */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==============================
+   Modo claro — superficie de página
+   ============================== */
+
+html:not([data-theme="dark"]) {
+    --color-page-bg: #FFFFFF;
+}
+
+html:not([data-theme="dark"]) body {
+    background-color: var(--color-background);
+}
+
+html:not([data-theme="dark"]) .section {
+    background-color: var(--color-background);
+}
+
+/* ==============================
+   Tarjetas — modo claro profesional
+   ============================== */
+
+html:not([data-theme="dark"]) .card,
+html:not([data-theme="dark"]) .experience-card,
+html:not([data-theme="dark"]) .destination-card,
+html:not([data-theme="dark"]) .about__card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        0 1px 2px 0 rgb(0 0 0 / 0.05),
+        0 1px 3px 0 rgb(0 0 0 / 0.04);
+}
+
+html:not([data-theme="dark"]) .card:hover,
+html:not([data-theme="dark"]) .experience-card:hover,
+html:not([data-theme="dark"]) .destination-card:hover,
+html:not([data-theme="dark"]) .about__card:hover {
+    border-color: rgba(15, 23, 42, 0.25);
+
+    box-shadow:
+        0 4px 6px -1px rgb(0 0 0 / 0.08),
+        0 12px 32px rgba(15, 23, 42, 0.12);
+
+    transform: translateY(-4px);
+}
+
+/* ==============================
+   Botones — modo claro con colores de marca
+   ============================== */
+
+html:not([data-theme="dark"]) .button {
+    border: 1px solid var(--color-border);
+}
+
+html:not([data-theme="dark"]) .button--primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+html:not([data-theme="dark"]) .button--primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    box-shadow:
+        0 4px 6px -1px rgb(0 0 0 / 0.08),
+        0 12px 32px rgba(30, 58, 138, 0.15);
+}
+
+html:not([data-theme="dark"]) .button--secondary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: #FFFFFF;
+}
+
+html:not([data-theme="dark"]) .button--secondary:hover {
+    background-color: var(--color-secondary-dark);
+    border-color: var(--color-secondary-dark);
+    box-shadow:
+        0 4px 6px -1px rgb(0 0 0 / 0.08),
+        0 12px 32px rgba(15, 118, 110, 0.15);
+}
+
+html:not([data-theme="dark"]) .button--outline {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+html:not([data-theme="dark"]) .button--outline:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+/* Botón ghost en modo claro */
+html:not([data-theme="dark"]) .button--ghost {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+html:not([data-theme="dark"]) .button--ghost:hover {
+    background-color: var(--color-surface-soft);
+    color: var(--color-primary-dark);
+}
+
+/* ==============================
+   Header — modo claro anclaje visual
+   ============================== */
+
+html:not([data-theme="dark"]) .site-header {
+    border-bottom: 1px solid var(--color-border);
+    box-shadow:
+        0 1px 2px 0 rgb(0 0 0 / 0.05),
+        0 1px 3px 0 rgb(0 0 0 / 0.04);
+}
+
+/* ==============================
+   Hero — modo claro contraste
+   ============================== */
+
+html:not([data-theme="dark"]) .hero__landscape {
+    border: 1px solid var(--color-border);
+}
+
+/* ==============================
+   Detalles de página — modo claro
+   ============================== */
+
+html:not([data-theme="dark"]) .experience-detail__media,
+html:not([data-theme="dark"]) .destination-detail__media {
+    border: 1px solid var(--color-border);
+
+    box-shadow:
+        0 1px 2px 0 rgb(0 0 0 / 0.05),
+        0 4px 6px -1px rgb(0 0 0 / 0.06);
+}
+
+/* ==============================
+   Footer — modo claro
+   ============================== */
+
+html:not([data-theme="dark"]) .site-footer {
+    border-top: 1px solid var(--color-border);
+}
+
+/* ==============================
+   Breakpoints móviles — ajuste fino
+   ============================== */
+
+@media (max-width: 480px) {
+    .container {
+        padding-inline: 1rem;
+    }
+
+    .section {
+        padding-block: var(--spacing-2xl);
+    }
+
+    .section--large {
+        padding-block: var(--spacing-3xl);
+    }
+
+    .hero {
+        padding-block: clamp(3rem, 8vw, 5rem);
+    }
+
+    .hero__title {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .hero__visual {
+        min-height: 320px;
+    }
+
+    .about__card {
+        padding: var(--spacing-xl);
+    }
+
+    .experience-detail__media,
+    .destination-detail__media {
+        aspect-ratio: 4 / 3;
+    }
+
+    .experience-detail__title,
+    .destination-detail__title {
+        font-size: clamp(1.75rem, 10vw, 2.25rem);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        padding-inline: 1.5rem;
+    }
+
+    .hero__visual {
+        min-height: 390px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero__visual {
+        min-height: 460px;
+    }
+
+    .about__card {
+        padding: var(--spacing-4xl);
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero__visual {
+        min-height: 500px;
+    }
+}
+
+/* ==============================
+   Evitar desplazamiento horizontal en móvil
+   ============================== */
+
+@media (max-width: 767px) {
+    .grid {
+        gap: var(--spacing-md);
+    }
+
+    .hero__container {
+        gap: var(--spacing-2xl);
+    }
+
+    .hero__content {
+        max-width: 100%;
+    }
+
+    .hero__title {
+        max-width: 100%;
+    }
+
+    .hero__description {
+        max-width: 100%;
+    }
+}
+
+/* ==============================
+   Preferencia de movimiento reducido
+   ============================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

@@ -1,0 +1,628 @@
+/*
+ * Tarija Experiencias
+ * Component — Hero
+ *
+ * Responsabilidad:
+ * Definir la presentación visual del Hero
+ * de la página de inicio.
+ */
+
+/* ==============================
+   Hero
+   ============================== */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding-block: clamp(
+        4rem,
+        8vw,
+        7rem
+    );
+
+    background-color: var(--color-background);
+}
+
+/* ==============================
+   Contenedor
+   ============================== */
+
+.hero__container {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, 0.9fr);
+
+    align-items: center;
+
+    gap: clamp(
+        3rem,
+        7vw,
+        7rem
+    );
+}
+
+/* ==============================
+   Contenido
+   ============================== */
+
+.hero__content {
+    max-width: 650px;
+}
+
+/* ==============================
+   Eyebrow
+   ============================== */
+
+.hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: var(--spacing-lg);
+
+    color: var(--color-primary);
+
+    font-size: 0.8125rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero__eyebrow::before {
+    content: "";
+
+    width: 2rem;
+    height: 2px;
+
+    margin-right: 0.75rem;
+
+    background-color: var(--color-accent);
+
+    border-radius: var(--radius-full);
+}
+
+/* ==============================
+   Título
+   ============================== */
+
+.hero__title {
+    max-width: 10ch;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: clamp(
+        3.25rem,
+        6vw,
+        5.75rem
+    );
+
+    font-weight: 800;
+
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.hero__title span {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+/* ==============================
+   Descripción
+   ============================== */
+
+.hero__description {
+    max-width: 52ch;
+
+    margin-top: var(--spacing-xl);
+
+    color: var(--color-text-secondary);
+
+    font-size: clamp(
+        1rem,
+        1.5vw,
+        1.125rem
+    );
+
+    line-height: 1.7;
+}
+
+/* ==============================
+   Acciones
+   ============================== */
+
+.hero__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: var(--spacing-md);
+
+    margin-top: var(--spacing-xl);
+}
+
+.hero__primary-action,
+.hero__secondary-action {
+    min-height: 3.25rem;
+    padding-inline: 1.375rem;
+}
+
+/* ==============================
+   Indicadores
+   ============================== */
+
+.hero__trust {
+    display: flex;
+    align-items: center;
+
+    margin-top: var(--spacing-2xl);
+
+    gap: var(--spacing-lg);
+}
+
+.hero__trust-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.125rem;
+}
+
+.hero__trust-item strong {
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+}
+
+.hero__trust-item span {
+    color: var(--color-text-muted);
+
+    font-size: 0.75rem;
+}
+
+.hero__trust-divider {
+    width: 1px;
+    height: 2rem;
+
+    background-color: var(--color-border);
+}
+
+/* ==============================
+   Área visual
+   ============================== */
+
+.hero__visual {
+    position: relative;
+
+    min-height: 500px;
+
+    isolation: isolate;
+}
+
+/* ==============================
+   Paisaje
+   ============================== */
+
+.hero__landscape {
+    position: absolute;
+    inset: 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(30, 58, 138, 0.45) 0%,
+            rgba(15, 118, 110, 0.35) 48%,
+            rgba(20, 184, 166, 0.25) 100%
+        ),
+        url("/assets/images/hero-landscape.webp");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-lg);
+}
+
+/* ==============================
+   Sol
+   ============================== */
+
+.hero__sun {
+    position: absolute;
+
+    top: 15%;
+    right: 17%;
+
+    width: 5rem;
+    height: 5rem;
+
+    background-color: var(--color-accent-light);
+
+    border-radius: 50%;
+
+    opacity: 0.9;
+}
+
+/* ==============================
+   Montañas
+   ============================== */
+
+.hero__mountain {
+    position: absolute;
+
+    right: -10%;
+    bottom: 0;
+    left: -10%;
+
+    height: 58%;
+
+    clip-path: polygon(
+        0 100%,
+        0 68%,
+        14% 45%,
+        25% 62%,
+        39% 30%,
+        53% 57%,
+        68% 38%,
+        81% 61%,
+        100% 42%,
+        100% 100%
+    );
+}
+
+.hero__mountain--back {
+    background-color: var(--color-secondary-light);
+
+    opacity: 0.55;
+
+    transform: translateY(-12%);
+    filter: blur(1px);
+}
+
+.hero__mountain--middle {
+    background-color: var(--color-secondary);
+
+    opacity: 0.8;
+
+    transform: translateY(3%);
+}
+
+.hero__mountain--front {
+    background-color: var(--color-secondary-dark);
+
+    transform: translateY(18%);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Ocultar elementos decorativos CSS para mostrar solo la imagen del hero */
+
+.hero__sun,
+.hero__mountain,
+.hero__vineyard {
+    display: none;
+}
+
+/* ==============================
+   Viñedos
+   ============================== */
+
+.hero__vineyard {
+    position: absolute;
+
+    right: 8%;
+    bottom: 8%;
+    left: 8%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.8rem;
+
+    transform: rotate(-5deg);
+}
+
+.hero__vineyard span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: var(--color-accent-light);
+
+    opacity: 0.65;
+}
+
+.hero__vineyard span::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    margin-top: 0.55rem;
+
+    background-color: var(--color-accent-light);
+
+    opacity: 0.45;
+}
+
+/* ==============================
+   Tarjeta de experiencia
+   ============================== */
+
+.hero__experience-card {
+    position: absolute;
+
+    right: -1.5rem;
+    bottom: 3rem;
+
+    width: min(
+        19rem,
+        calc(100% - 2rem)
+    );
+
+    padding: var(--spacing-xl);
+
+    color: var(--color-text);
+
+    background-color: color-mix(
+        in srgb,
+        var(--color-surface) 94%,
+        transparent
+    );
+
+    border: 1px solid var(--color-border-light);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    backdrop-filter: blur(12px);
+}
+
+.hero__card-label {
+    display: block;
+
+    margin-bottom: var(--spacing-sm);
+
+    color: var(--color-primary);
+
+    font-size: 0.6875rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero__card-title {
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.hero__card-description {
+    margin-top: 0.5rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+.hero__card-meta {
+    display: flex;
+    align-items: center;
+
+    gap: var(--spacing-md);
+
+    margin-top: var(--spacing-lg);
+
+    color: var(--color-text-muted);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.hero__card-meta span + span::before {
+    content: "•";
+
+    margin-right: var(--spacing-md);
+
+    color: var(--color-accent);
+}
+
+/* ==============================
+   Badge flotante
+   ============================== */
+
+.hero__floating-badge {
+    position: absolute;
+
+    top: 3rem;
+    left: -2rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.625rem;
+
+    padding: 0.75rem 1rem;
+
+    color: var(--color-text);
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+
+    box-shadow: var(--shadow-md);
+
+    font-size: 0.75rem;
+}
+
+.hero__floating-badge strong {
+    display: block;
+
+    color: var(--color-primary);
+}
+
+.hero__floating-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+
+    color: var(--color-surface);
+    background-color: var(--color-primary);
+
+    border-radius: 50%;
+}
+
+/* ==============================
+   Tablet
+   ============================== */
+
+@media (max-width: 1000px) {
+
+    .hero__container {
+        grid-template-columns: 1fr;
+
+        gap: var(--spacing-2xl);
+    }
+
+    .hero__content {
+        max-width: 720px;
+    }
+
+    .hero__title {
+        max-width: 12ch;
+    }
+
+    .hero__visual {
+        min-height: 460px;
+    }
+
+    .hero__floating-badge {
+        left: 1rem;
+    }
+
+    .hero__experience-card {
+        right: 1rem;
+    }
+}
+
+/* ==============================
+   Mobile
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-block: 3.5rem;
+    }
+
+    .hero__container {
+        gap: var(--spacing-xl);
+    }
+
+    .hero__title {
+        font-size: clamp(
+            2.75rem,
+            14vw,
+            4rem
+        );
+    }
+
+    .hero__description {
+        margin-top: var(--spacing-lg);
+    }
+
+    .hero__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero__primary-action,
+    .hero__secondary-action {
+        width: 100%;
+    }
+
+    .hero__trust {
+        gap: 0.75rem;
+    }
+
+    .hero__trust-divider {
+        height: 1.5rem;
+    }
+
+    .hero__visual {
+        min-height: 390px;
+    }
+
+    .hero__experience-card {
+        right: 0.75rem;
+        bottom: 1.5rem;
+
+        width: 17rem;
+
+        padding: var(--spacing-lg);
+    }
+
+    .hero__floating-badge {
+        top: 1rem;
+        left: 0.75rem;
+    }
+}
+
+/* ==============================
+   Móvil pequeño
+   ============================== */
+
+@media (max-width: 480px) {
+
+    .hero__title {
+        font-size: clamp(
+            2.25rem,
+            16vw,
+            3.5rem
+        );
+    }
+
+    .hero__visual {
+        min-height: 320px;
+    }
+
+    .hero__experience-card {
+        width: 15rem;
+        padding: var(--spacing-md);
+        bottom: 1rem;
+        right: 0.5rem;
+    }
+
+    .hero__floating-badge {
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.6875rem;
+    }
+
+    .hero__floating-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

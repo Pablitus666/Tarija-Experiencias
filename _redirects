@@ -1,0 +1,16 @@
+# Redirects de rutas limpias — Tarija Experiencias
+# Netlify lee este archivo para reglas de redireccionamiento
+
+# Página principal
+/     /index.html  200
+
+# Rutas limpias sin .html
+/experiencias   /pages/experiencias.html   200
+/destinos       /pages/destinos.html       200
+/contacto       /pages/contacto.html       200
+/nosotros       /pages/nosotros.html       200
+/viajeros       /pages/viajeros.html       200
+/proveedores    /pages/proveedores.html    200
+
+# Fallback 404
+/*    /404.html   404

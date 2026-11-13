@@ -1,0 +1,362 @@
+/*
+ * Tarija Experiencias
+ * Component — Navigation
+ *
+ * Responsabilidad:
+ * Definir los estilos de la navegación global
+ * y sus diferentes estados responsive.
+ *
+ * El comportamiento interactivo es responsabilidad
+ * de JavaScript.
+ */
+
+/* ==============================
+   Navegación principal
+   ============================== */
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+}
+
+/* ==============================
+   Menú
+   ============================== */
+
+.site-navigation__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 1.25rem;
+
+    min-width: 0;
+}
+
+/* ==============================
+   Lista de navegación
+   ============================== */
+
+.site-navigation__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 0.875rem;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    white-space: nowrap;
+}
+
+/* ==============================
+   Elementos
+   ============================== */
+
+.site-navigation__item {
+    flex-shrink: 0;
+}
+
+/* ==============================
+   Enlaces
+   ============================== */
+
+.site-navigation__link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 2.75rem;
+    padding-inline: 0.25rem;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.9375rem;
+    font-weight: 600;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        color var(--transition-fast);
+}
+
+.site-navigation__link:hover {
+    color: var(--color-primary);
+}
+
+/* ==============================
+   Estado activo
+   ============================== */
+
+.site-navigation__link.is-active {
+    color: var(--color-primary);
+}
+
+.site-navigation__link.is-active::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0.25rem;
+    bottom: 0.125rem;
+    left: 0.25rem;
+
+    height: 2px;
+
+    background-color: var(--color-primary);
+
+    border-radius: var(--radius-full);
+}
+
+/* ==============================
+   Acciones
+   ============================== */
+
+.site-navigation__actions {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    gap: var(--spacing-sm);
+}
+
+/* ==============================
+   Botón explorar experiencias
+   ============================== */
+
+.site-navigation__explore {
+    flex-shrink: 0;
+
+    white-space: nowrap;
+}
+
+/* ==============================
+   Botón de tema
+   ============================== */
+
+.site-navigation__theme {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    padding: 0;
+
+    color: var(--color-text);
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.site-navigation__theme:hover {
+    color: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+    transform: translateY(-1px);
+}
+
+/* Icono del botón de tema (imágenes PNG) */
+
+.site-navigation__theme .theme-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.site-navigation__theme .theme-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Asegura que al cambiar de tema no quede residuo visual */
+
+.site-navigation__theme .theme-icon::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ==============================
+   Botón menú móvil
+   ============================== */
+
+.site-navigation__toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    padding: 0;
+
+    color: var(--color-text);
+
+    background-color: transparent;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    cursor: pointer;
+}
+
+/* ==============================
+   Icono hamburguesa
+   ============================== */
+
+.site-navigation__toggle-icon {
+    position: relative;
+
+    display: block;
+
+    width: 1.25rem;
+    height: 1rem;
+}
+
+/* ==============================
+   Pantallas intermedias
+   ============================== */
+
+@media (max-width: 1200px) {
+
+    .site-navigation__menu {
+        gap: 1rem;
+    }
+
+    .site-navigation__list {
+        gap: 0.625rem;
+    }
+
+    .site-navigation__link {
+        font-size: 0.875rem;
+    }
+
+    .site-navigation__explore {
+        padding-inline: 0.875rem;
+    }
+}
+
+/* ==============================
+   Menú móvil
+   ============================== */
+
+@media (max-width: 767px) {
+
+    .site-navigation__toggle {
+        display: inline-flex;
+    }
+
+    .site-navigation__menu {
+        position: absolute;
+
+        top: 100%;
+        right: 0;
+        left: 0;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: var(--spacing-lg);
+
+        background-color: var(--color-surface);
+
+        border-top: 1px solid var(--color-border-light);
+        border-bottom: 1px solid var(--color-border);
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .site-navigation__menu.is-open {
+        display: flex;
+    }
+
+    .site-navigation__list {
+        display: flex;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        width: 100%;
+    }
+
+    .site-navigation__item {
+        width: 100%;
+    }
+
+    .site-navigation__link {
+        display: flex;
+
+        width: 100%;
+        min-height: 3rem;
+
+        padding-inline: 0.5rem;
+    }
+
+    .site-navigation__link.is-active::after {
+        right: auto;
+        bottom: 0.5rem;
+        left: 0.5rem;
+
+        width: 2rem;
+    }
+
+    .site-navigation__actions {
+        display: flex;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+
+        margin-top: var(--spacing-md);
+    }
+
+    .site-navigation__explore {
+        width: 100%;
+    }
+
+    .site-navigation__theme {
+        width: 100%;
+        height: 2.75rem;
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "tarijaexperiencias",
+  "version": "1.0.0",
+  "description": "Sitio web profesional de experiencias turísticas de Tarija, Bolivia. Enoturismo, aventura, bienestar, cultura y naturaleza.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "live-server --open=index.html --port=5500 --ignore=node_modules",
+    "lint": "echo 'Lint pendiente: configurar ESLint antes de producción'",
+    "postinstall": "echo 'Dependencias instaladas. Listo para desarrollo.'"
+  },
+  "keywords": [
+    "tarija",
+    "turismo",
+    "experiencias",
+    "enoturismo",
+    "aventura",
+    "bolivia"
+  ],
+  "author": "Tarija Experiencias",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/tarijaexperiencias.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

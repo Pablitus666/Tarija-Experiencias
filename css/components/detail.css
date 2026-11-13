@@ -1,0 +1,290 @@
+/*
+ * Tarija Experiencias
+ * Component — Detail Pages
+ *
+ * Responsabilidad:
+ * Definir la presentación visual de las páginas de detalle
+ * de experiencias y destinos individuales.
+ */
+
+/* ==============================
+   Experience Detail
+   ============================== */
+
+.experience-detail__media {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-lg);
+
+    background-color: var(--color-surface-soft);
+
+    margin-bottom: var(--spacing-xl);
+}
+
+.experience-detail__image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.experience-detail__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.experience-detail__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.experience-detail__category {
+    display: inline-flex;
+
+    padding: 0.375rem 0.75rem;
+
+    color: var(--color-primary);
+
+    background-color: color-mix(
+        in srgb,
+        var(--color-primary) 10%,
+        transparent
+    );
+
+    border-radius: var(--radius-full);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.experience-detail__title {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+.experience-detail__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-lg);
+
+    margin-bottom: var(--spacing-md);
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.875rem;
+}
+
+.experience-detail__meta-item strong {
+    color: var(--color-text);
+
+    font-weight: 600;
+}
+
+.experience-detail__description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.experience-detail__subtitle {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+}
+
+.experience-detail__text {
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    text-align: justify;
+
+    max-width: none;
+
+    overflow-wrap: break-word;
+}
+
+/* ==============================
+   Destination Detail
+   ============================== */
+
+.destination-detail__media {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-lg);
+
+    background-color: var(--color-surface-soft);
+
+    margin-bottom: var(--spacing-xl);
+}
+
+.destination-detail__image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.destination-detail__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.destination-detail__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.destination-detail__municipality {
+    display: inline-flex;
+
+    padding: 0.375rem 0.75rem;
+
+    color: var(--color-secondary);
+
+    background-color: color-mix(
+        in srgb,
+        var(--color-secondary) 10%,
+        transparent
+    );
+
+    border-radius: var(--radius-full);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.destination-detail__experiences {
+    display: inline-flex;
+
+    padding: 0.375rem 0.75rem;
+
+    color: var(--color-accent);
+
+    background-color: color-mix(
+        in srgb,
+        var(--color-accent) 10%,
+        transparent
+    );
+
+    border-radius: var(--radius-full);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+}
+
+.destination-detail__title {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+.destination-detail__description {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.destination-detail__subtitle {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+}
+
+.destination-detail__text {
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 1rem;
+    line-height: 1.8;
+
+    text-align: justify;
+
+    max-width: none;
+
+    overflow-wrap: break-word;
+}
+
+/* ==============================
+   Modo claro — reforzar contraste en páginas de detalle
+   ============================== */
+
+html:not([data-theme="dark"]) .experience-detail__media,
+html:not([data-theme="dark"]) .destination-detail__media {
+    border: 1px solid rgba(15, 23, 42, 0.12);
+
+    box-shadow:
+        0 1px 3px rgba(15, 23, 42, 0.08),
+        0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 767px) {
+    .experience-detail__title,
+    .destination-detail__title {
+        font-size: clamp(1.75rem, 10vw, 2.25rem);
+    }
+
+    .experience-detail__meta,
+    .destination-detail__header {
+        gap: var(--spacing-sm);
+    }
+}

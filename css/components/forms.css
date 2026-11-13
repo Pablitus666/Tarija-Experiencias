@@ -1,0 +1,250 @@
+/*
+ * Tarija Experiencias
+ * Component — Forms
+ *
+ * Responsabilidad:
+ * Definir los estilos visuales reutilizables
+ * para formularios y controles de entrada.
+ *
+ * Este archivo no debe contener lógica de validación.
+ * El comportamiento será responsabilidad de JavaScript.
+ */
+
+/* ==============================
+   Grupo de formulario
+   ============================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+/* ==============================
+   Etiqueta
+   ============================== */
+
+.form-label {
+    color: var(--color-text);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ==============================
+   Campo base
+   ============================== */
+
+.form-control {
+    width: 100%;
+    min-height: 2.875rem;
+
+    padding: 0.6875rem 0.875rem;
+
+    color: var(--color-text);
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    font: inherit;
+    font-size: 0.9375rem;
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+/* ==============================
+   Placeholder
+   ============================== */
+
+.form-control::placeholder {
+    color: var(--color-text-muted);
+    opacity: 1;
+}
+
+/* ==============================
+   Hover
+   ============================== */
+
+.form-control:hover {
+    border-color: var(--color-text-muted);
+}
+
+/* ==============================
+   Focus
+   ============================== */
+
+.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+/* ==============================
+   Select
+   ============================== */
+
+select.form-control {
+    cursor: pointer;
+}
+
+/* ==============================
+   Textarea
+   ============================== */
+
+textarea.form-control {
+    min-height: 8rem;
+
+    resize: vertical;
+}
+
+/* ==============================
+   Checkbox y radio
+   ============================== */
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.form-check input {
+    width: 1.125rem;
+    height: 1.125rem;
+
+    flex-shrink: 0;
+
+    margin-top: 0.125rem;
+
+    accent-color: var(--color-primary);
+
+    cursor: pointer;
+}
+
+.form-check label {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+/* ==============================
+   Texto de ayuda
+   ============================== */
+
+.form-help {
+    margin: 0;
+
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+/* ==============================
+   Estado de error / inválido
+   ============================== */
+
+.form-group--error .form-control,
+.form-control.invalid,
+.form-control[aria-invalid="true"] {
+    border-color: var(--color-danger);
+}
+
+.form-control.invalid:focus,
+.form-control[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 3px rgb(220 53 69 / 15%);
+}
+
+.form-error {
+    margin: 0;
+
+    color: var(--color-danger);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+/* ==============================
+   Estado de éxito
+   ============================== */
+
+.form-group--success .form-control {
+    border-color: var(--color-success);
+}
+
+.form-success {
+    margin: 0;
+
+    color: var(--color-success);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+/* ==============================
+   Grupo de acciones
+   ============================== */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+
+    margin-top: var(--spacing-lg);
+}
+
+/* ==============================
+   Campo deshabilitado
+   ============================== */
+
+.form-control:disabled,
+.form-control[readonly] {
+    color: var(--color-text-muted);
+    background-color: var(--color-surface-soft);
+
+    cursor: not-allowed;
+}
+
+.form-control:disabled {
+    opacity: 0.7;
+}
+
+/* ==============================
+   Campo requerido
+   ============================== */
+
+.form-required {
+    color: var(--color-danger);
+}
+
+/* ==============================
+   Formulario compacto
+   ============================== */
+
+.form--compact {
+    gap: var(--spacing-sm);
+}
+
+.form--compact .form-group {
+    gap: 0.25rem;
+}
+
+/* ==============================
+   Responsive móvil
+   ============================== */
+
+@media (max-width: 767px) {
+
+    .form-actions {
+        justify-content: stretch;
+    }
+
+    .form-actions .button {
+        flex: 1;
+    }
+}

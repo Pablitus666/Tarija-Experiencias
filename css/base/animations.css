@@ -1,0 +1,99 @@
+/*
+ * Tarija Experiencias
+ * CSS Base — Animations
+ *
+ * Responsabilidad:
+ * Definir animaciones de revelado al hacer scroll
+ * y utilidades de movimiento para la aplicación.
+ */
+
+/* ==============================
+   Revelado al hacer scroll — instantáneo y fluido
+   ============================== */
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(0.3rem);
+    transition:
+        opacity 0.3s ease-out,
+        transform 0.3s ease-out;
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variantes de revelado — mínimas */
+
+[data-reveal="fade-up"] {
+    transform: translateY(0.4rem);
+}
+
+[data-reveal="fade-in"] {
+    transform: none;
+}
+
+[data-reveal="slide-left"] {
+    transform: translateX(0.4rem);
+}
+
+/* Retrasos eliminados — las secciones aparecen sin demora */
+
+.reveal-delay-1,
+.reveal-delay-2,
+.reveal-delay-3,
+.reveal-delay-4,
+.reveal-delay-5 {
+    transition-delay: 0s !important;
+}
+
+/* ==============================
+   Botón volver arriba
+   ============================== */
+
+.scroll-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+
+    z-index: var(--z-toast);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+
+    transition:
+        opacity var(--transition-normal),
+        visibility var(--transition-normal),
+        transform var(--transition-normal),
+        box-shadow var(--transition-fast);
+}
+
+.scroll-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   Reducido de movimiento
+   ============================== */
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal],
+    .scroll-to-top {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}

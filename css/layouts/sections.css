@@ -1,0 +1,99 @@
+/*
+ * Tarija Experiencias
+ * Layout — Sections
+ *
+ * Responsabilidad:
+ * Definir la estructura y el espaciado vertical
+ * reutilizable de las secciones del sitio.
+ *
+ * Este archivo no debe contener estilos de componentes.
+ */
+
+/* ==============================
+   Sección base
+   ============================== */
+
+.section {
+    width: 100%;
+    padding-block: var(--spacing-3xl);
+}
+
+/* ==============================
+   Sección compacta
+   ============================== */
+
+.section--compact {
+    padding-block: var(--spacing-2xl);
+}
+
+/* ==============================
+   Sección amplia
+   ============================== */
+
+.section--large {
+    padding-block: 5rem;
+}
+
+/* ==============================
+   Encabezado de sección
+   ============================== */
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-2xl);
+}
+
+/* ==============================
+   Título de sección
+   ============================== */
+
+.section-title {
+    margin: 0;
+}
+
+/* ==============================
+   Descripción de sección
+   ============================== */
+
+.section-description {
+    margin: 0;
+    color: var(--color-text-secondary);
+}
+
+/* ==============================
+   Tablet
+   ============================== */
+
+@media (min-width: 768px) {
+    .section {
+        padding-block: 4rem;
+    }
+
+    .section--compact {
+        padding-block: 3rem;
+    }
+
+    .section--large {
+        padding-block: 6rem;
+    }
+}
+
+/* ==============================
+   Desktop
+   ============================== */
+
+@media (min-width: 1200px) {
+    .section {
+        padding-block: 5rem;
+    }
+
+    .section--compact {
+        padding-block: 4rem;
+    }
+
+    .section--large {
+        padding-block: 7rem;
+    }
+}
