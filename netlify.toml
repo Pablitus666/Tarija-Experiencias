@@ -67,7 +67,7 @@
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/images%20utilitarios/*"
+  for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
