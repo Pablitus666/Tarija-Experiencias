@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t d">
+<title id="t">Isotipo Tarija Experiencias</title><desc id="d">Sol, montañas, viñedos y uvas inspirados en los paisajes de Tarija, Bolivia.</desc>
+<defs>
+ <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFD45A"/><stop offset="1" stop-color="#E97824"/></linearGradient>
+ <linearGradient id="mount" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#16799A"/><stop offset="1" stop-color="#123B63"/></linearGradient>
+ <linearGradient id="field" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A5D84B"/><stop offset="1" stop-color="#087C58"/></linearGradient>
+ <clipPath id="land"><path d="M58 305 Q100 260 145 270 Q190 236 238 257 Q291 224 345 263 Q401 255 454 305 Q442 385 365 425 Q256 477 147 425 Q78 390 58 305Z"/></clipPath>
+</defs>
+<!-- rays -->
+<g fill="#F5A623"><path d="M247 28h18l-9 57z"/><path d="M153 57l16-9 15 58z"/><path d="M342 48l16 9-31 49z"/><path d="M83 121l10-16 39 45z"/><path d="M419 105l10 16-59 29z"/><path d="M48 205l4-19 59 28z"/><path d="M460 186l4 19-63 9z"/></g>
+<path d="M102 224a154 154 0 0 1 308 0v42H102Z" fill="url(#sun)"/>
+<path d="M131 219q125-118 250 0" fill="none" stroke="#FFE8A1" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+<!-- landscape -->
+<path d="M44 302 143 190l54 54 70-104 117 133 81 29Z" fill="url(#mount)"/>
+<path d="m196 244 71-104 42 51-28-12-21 20-20-13-22 32Z" fill="#D8EDF0"/>
+<path d="M44 302 143 190l54 54 70-104 117 133 81 29-83-8-116-72-79 65-69 25Z" fill="#0E426B" opacity=".55"/>
+<g clip-path="url(#land)">
+ <path d="M40 305q110-52 212-14t240 0v190H40Z" fill="#075E57"/>
+ <path d="M245 290Q350 254 500 293L500 445Q375 365 245 290Z" fill="url(#field)"/>
+ <g fill="none" stroke="#F6D34B" stroke-width="9" stroke-linecap="round"><path d="M239 298Q351 286 475 339"/><path d="M226 314Q344 318 463 370"/><path d="M218 333Q333 347 445 398"/><path d="M210 353Q316 378 424 422"/></g>
+ <path d="M42 367q104-76 207-29t232 8" fill="none" stroke="#15918A" stroke-width="20"/>
+ <path d="M43 396q117-61 215-17t217 7" fill="none" stroke="#123B63" stroke-width="25"/>
+</g>
+<!-- vine leaves and grapes -->
+<g stroke="#075A42" stroke-width="4" stroke-linejoin="round">
+ <path d="M82 282q-42-38-50-3 15 4 17 25-20 7-11 26 18-5 30 12 22-12 22-37Z" fill="#57B947"/>
+ <path d="M99 300q-3-43 28-43 8 20-3 37 22 7 14 27-21-2-31 18-19-13-8-39Z" fill="#269B54"/>
+ <path d="M89 293q10 36 29 57" fill="none" stroke="#B7E27A" stroke-width="3"/>
+</g>
+<g fill="#8E236D" stroke="#5C174F" stroke-width="3">
+ <circle cx="111" cy="345" r="17"/><circle cx="140" cy="343" r="17"/><circle cx="126" cy="372" r="17"/><circle cx="155" cy="371" r="17"/><circle cx="141" cy="400" r="17"/><circle cx="169" cy="397" r="16"/>
+</g>
+<g fill="none" stroke="#E9A6D0" stroke-width="4" stroke-linecap="round"><path d="M106 338l5 4"/><path d="M135 336l5 4"/><path d="M121 365l5 4"/></g>
+<path d="M121 326q-5-29 24-35" fill="none" stroke="#237D43" stroke-width="7" stroke-linecap="round"/>
+</svg>

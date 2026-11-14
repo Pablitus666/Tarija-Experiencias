@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Tarija Experiencias</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#28577A"/>
+      <stop offset="1" stop-color="#173B5E"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8C65B"/>
+      <stop offset="1" stop-color="#D97732"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#bg)"/>
+  <circle cx="43" cy="19" r="8" fill="url(#sun)"/>
+  <path d="M8 47 22 27 31 37 41 22 57 47Z" fill="#F4F1E8"/>
+  <path d="M8 47 22 27 31 37 41 22 57 47Z" fill="#0F766E" opacity=".2"/>
+  <path d="M10 49 Q23 43 35 49 T55 49" fill="none" stroke="#F4B544" stroke-width="3" stroke-linecap="round"/>
+  <path d="M14 55 Q27 49 39 55 T53 55" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity=".9"/>
+</svg>

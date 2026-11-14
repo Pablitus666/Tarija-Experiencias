@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="104" viewBox="0 0 440 104" role="img" aria-labelledby="title desc">
+  <title id="title">Tarija Experiencias</title>
+  <desc id="desc">Identidad visual con montañas, sol y líneas que evocan viñedos y paisajes de Tarija.</desc>
+  <defs>
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#28577A"/>
+      <stop offset="1" stop-color="#173B5E"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4B544"/>
+      <stop offset="1" stop-color="#D97732"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Isotipo: paisaje, sol y surcos de viñedo -->
+  <g transform="translate(8 8)">
+    <circle cx="61" cy="22" r="12" fill="url(#sun)"/>
+    <path d="M7 66 29 34 43 51 60 27 86 66Z" fill="url(#mountain)"/>
+    <path d="M43 51 60 27 72 46 64 42 58 48 53 43Z" fill="#F4F1E8" opacity=".96"/>
+    <path d="M12 69 Q31 61 49 69 T87 69" fill="none" stroke="#0F766E" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M20 77 Q39 69 57 77 T89 77" fill="none" stroke="#D97732" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+  </g>
+
+  <!-- Logotipo: proporciones y espaciado corregidos -->
+  <g font-family="Montserrat, Poppins, Arial, sans-serif">
+    <text x="116" y="52" font-size="39" font-weight="800" letter-spacing="-1.2" fill="#173B5E">Tarija</text>
+    <text x="117" y="78" font-size="17" font-weight="600" letter-spacing="3.2" fill="#0F766E">EXPERIENCIAS</text>
+  </g>
+  <path d="M117 87 H420" stroke="#D97732" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

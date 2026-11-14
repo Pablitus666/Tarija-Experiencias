@@ -24,3 +24,6 @@ build/
 *.swp
 *.swo
 *~
+
+# Diseño (archivos fuente Photoshop no se suben al repositorio)
+*.psd

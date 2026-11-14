@@ -20,7 +20,7 @@ Enoturismo, aventura, bienestar, cultura y naturaleza.
 ## 🖼️ Vista previa
 
 <p align="center">
-  <img src="lugares-turisticos-tarija.webp" alt="Tarija Experiencias — Vista previa" width="700"/>
+  <img src="images%20utilitarios/Preview.png" alt="Tarija Experiencias — Vista previa" width="700"/>
 </p>
 
 ---
@@ -61,7 +61,7 @@ tarijaexperiencias/
 ├── manifest.json              # PWA manifest
 ├── favicon.svg                # Favicon del sitio
 ├── logo.svg                   # Logo principal
-├── lugares-turisticos-tarija.webp  # Imagen de preview
+├── images%20utilitarios/  # Imágenes utilitarias (preview, screenshots, logos)
 ├── package.json               # Dependencias y scripts (Node >=18)
 ├── README.md                  # Este archivo
 ├── .gitignore                 # Archivos ignorados por Git
@@ -117,7 +117,7 @@ npm run dev
 ## 📷 Capturas de pantalla
 
 <p align="center">
-  <img src="lugares-turisticos-tarija.webp" alt="Tarija Experiencias — Home" width="600"/>
+  <img src="images%20utilitarios/screenshot.png" alt="Tarija Experiencias — Home" width="600"/>
 </p>
 
 ---
@@ -219,10 +219,12 @@ Este proyecto se distribuye bajo la licencia **MIT**.
 
 ## 👨‍💻 Autor
 
-**Tarija Experiencias**  
-📍 Tarija, Bolivia 🇧🇴  
-© 2026 — Tarija Experiencias
+**Walter Pablo Téllez Ayala**  
+Software Developer  
+📍 Bolivia 🇧🇴 <img src="https://flagcdn.com/w20/bo.png" width="20"/><br>
+📧 pharmakoz@gmail.com
 
+**Tarija Experiencias**  
 ---
 
 **Descubre. Elige. Vive Tarija.**
