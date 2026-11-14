@@ -67,12 +67,12 @@
     Access-Control-Allow-Origin = "*"
 
 [[headers]]
-  for = "/assets/logo.svg"
+  for = "/images%20utilitarios/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/favicon.svg"
+  for = "/images%20utilitarios/favicon.svg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 

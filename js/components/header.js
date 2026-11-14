@@ -29,7 +29,7 @@ export function renderHeader(container) {
                 aria-label="Tarija Experiencias — Inicio"
             >
                 <img
-                    src="/assets/logo.svg"
+                    src="/images%20utilitarios/logo-horizontal.svg"
                     alt="Tarija Experiencias"
                     class="site-header__logo"
                     width="180"
