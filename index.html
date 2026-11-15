@@ -19,11 +19,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
         rel="stylesheet"
+        media="print"
+        onload="this.media='all'"
     >
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preload" as="style" href="./css/main.css" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="./css/main.css" media="print" onload="this.media='all'">
+    <link rel="preload" as="image" href="/lugares-turisticos-tarija.webp" fetchpriority="high">
+    <link rel="modulepreload" href="./js/core/app.js">
     <link rel="shortcut icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="/manifest.json">
     <link rel="canonical" href="https://tarija-experiences.netlify.app/">
 
